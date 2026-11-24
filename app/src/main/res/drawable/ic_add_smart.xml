@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+  <path
+      android:pathData="M16.41,16.408C17.752,15.066 15.971,11.109 12.432,7.569C8.893,4.03 4.936,2.25 3.593,3.592C2.251,4.934 4.032,8.892 7.571,12.431C11.11,15.97 15.067,17.751 16.41,16.408Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/core_color_text_dialog_content"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M12.432,12.431C15.971,8.891 17.752,4.934 16.41,3.592C15.067,2.249 11.11,4.03 7.571,7.569C4.032,11.108 2.251,15.066 3.593,16.408C4.936,17.75 8.893,15.97 12.432,12.431Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/core_color_text_dialog_content"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M10,10.938C10.518,10.938 10.938,10.518 10.938,10C10.938,9.482 10.518,9.063 10,9.063C9.482,9.063 9.063,9.482 9.063,10C9.063,10.518 9.482,10.938 10,10.938Z"
+      android:fillColor="@color/core_color_text_dialog_content"/>
+</vector>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="family_default_rooms">
+        <item>Living Room</item>
+        <item>Bedroom</item>
+        <item>Kitchen</item>
+    </string-array>
+</resources>

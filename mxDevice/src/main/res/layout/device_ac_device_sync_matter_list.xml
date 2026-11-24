@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_main">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_background_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:right_text="@string/mx_faq"
+        app:title_text="@string/mx_matter_sync" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_background_list"
+        android:paddingStart="36dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/mx_matter_expl"
+        android:textColor="@color/core_color_warning"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/core_ic_progress_err"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:tint="@color/core_color_warning" />
+
+    <TextView
+        android:id="@+id/tv_gateway"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/core_bg_solid_white_r16"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="@string/mx_matter_gateway_title"
+        android:textColor="@color/core_color_text_dialog_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+
+    <TextView
+        android:id="@+id/tv_matter_gateway"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/mx_matter_selected_gateway"
+        android:textColor="@color/core_color_text_dialog_content"
+        android:textSize="12sp"
+        app:drawableEndCompat="@drawable/core_ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/tv_gateway"
+        app:layout_constraintEnd_toEndOf="@id/tv_gateway"
+        app:layout_constraintTop_toTopOf="@id/tv_gateway" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_device"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_next"
+        app:layout_constraintTop_toBottomOf="@id/tv_gateway" />
+
+    <com.mxchip.mxapp.base.widget.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:ev_content="@string/mx_matter_no_device"
+        app:layout_constraintBottom_toBottomOf="@id/rv_device"
+        app:layout_constraintEnd_toEndOf="@id/rv_device"
+        app:layout_constraintStart_toStartOf="@id/rv_device"
+        app:layout_constraintTop_toTopOf="@id/rv_device" />
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/core_color_background_tab"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_device"
+        app:sbRadius="22"
+        tools:text="@string/mx_sync" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VerificationEditText">
+        <attr name="number" format="integer" />
+        <attr name="inputMargin" format="dimension" />
+        <attr name="bgColor" format="color|reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="inputRadius" format="dimension" />
+        <attr name="strokeFocusColor" format="color|reference" />
+        <attr name="strokeNormalColor" format="color|reference" />
+    </declare-styleable>
+
+</resources>

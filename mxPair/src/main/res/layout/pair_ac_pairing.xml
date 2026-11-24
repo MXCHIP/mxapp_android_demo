@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_main"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_status_dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="14sp"
+        tools:text="n 个设备正在添加，已添加成功 x 个" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_device"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/layout_added_action"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+
+        <com.mxchip.mxapp.base.widget.ShapeableButton
+            android:id="@+id/tv_continue_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minWidth="136dp"
+            android:minHeight="44dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/mx_resume_add"
+            android:textSize="17sp"
+            app:sbRadius="22" />
+
+        <com.mxchip.mxapp.base.widget.ShapeableButton
+            android:id="@+id/tv_next"
+            android:layout_width="136dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:gravity="center"
+            android:text="@string/mx_next"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:sbRadius="22" />
+    </LinearLayout>
+</LinearLayout>

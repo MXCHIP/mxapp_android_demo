@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+    <TextView
+        android:id="@+id/tv_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:drawablePadding="4dp"
+        android:text="@string/mx_select_country_code"
+        android:textColor="@color/app_color_white"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/core_ic_arrow_right"
+        app:drawableTint="@color/app_color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/env_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:drawablePadding="4dp"
+        android:textColor="@color/core_color_warning"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/core_ic_arrow_right"
+        app:drawableTint="@color/core_color_warning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon"
+        tools:text="测试环境" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="210dp"
+        android:src="@mipmap/ic_login_guide_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_desc"
+        android:textColor="@color/app_color_white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/tv_login"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/mx_login"
+        android:textColor="@color/app_main_color"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:sbBgColor="@color/white"
+        app:sbRadius="25" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/mx_create_account"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

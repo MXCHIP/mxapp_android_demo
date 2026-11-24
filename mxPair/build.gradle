@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'mxchip-router'
+}
+
+// 应用通用MX模块配置
+apply from: '../build-modules-common.gradle'
+
+android {
+    namespace "com.mxchip.mxapp.pair"
+}
+
+dependencies {
+    implementation project(':coreCommon')
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activityKtx
+    implementation libs.fragmentKtx
+    implementation libs.constraintLayout
+    implementation libs.lifecycleViewModelKtx
+    implementation libs.lifecycleRunTimeKtx
+    implementation libs.mxLink
+    implementation "com.google.android:flexbox:1.0.0"
+}

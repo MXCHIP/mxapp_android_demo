@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+PDF View Ui Customizations - Page number
+You need to add the custom layout to pdf_view_page_no.xml file and override the required attribute values.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageNo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:textColor="#00ffffff"
+    android:visibility="gone" />

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/core_bg_solid_white_r20"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/core_ic_arrow_right"
+        app:drawableStartCompat="@drawable/ic_room"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="测试" />
+
+    <LinearLayout
+        android:id="@+id/layout_sensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name">
+
+        <TextView
+            android:id="@+id/tv_sensor_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_smarthome_sensor"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/core_color_text_dialog_content"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_sensor_temperature"
+            tools:text="测试" />
+
+        <TextView
+            android:id="@+id/tv_sensor_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_smarthome_sensor"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/core_color_text_dialog_content"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_sensor_humidity"
+            tools:text="测试" />
+
+        <TextView
+            android:id="@+id/tv_sensor_pm25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_smarthome_sensor"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/core_color_text_dialog_content"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_sensor_pm25"
+            tools:text="测试" />
+
+        <TextView
+            android:id="@+id/tv_sensor_presence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_smarthome_sensor"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/core_color_text_dialog_content"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_sensor_presence"
+            tools:text="测试" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_scene"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_sensor"
+        app:layout_goneMarginTop="0dp">
+
+        <FrameLayout
+            android:id="@+id/scene_action_one"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_smarthome_scene">
+
+            <View
+                android:id="@+id/execute_action"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/scene_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/scene_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/core_color_text_title"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/scene_action_two"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_smarthome_scene">
+
+            <View
+                android:id="@+id/execute_action_two"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/scene_icon_two"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/scene_name_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/core_color_text_title"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+            <TextView
+                android:id="@+id/tv_scene_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mx_scene_add"
+                android:textColor="@color/core_color_text_title"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/action_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/core_color_dividers_a_45"
+        app:layout_constraintTop_toBottomOf="@id/layout_scene" />
+
+    <ImageView
+        android:id="@+id/iv_light_on"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_smarthome_light_on"
+        android:padding="10dp"
+        android:src="@drawable/ic_light_on"
+        app:layout_constraintEnd_toStartOf="@id/iv_light_off"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+    <ImageView
+        android:id="@+id/iv_light_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_smarthome_device_off"
+        android:padding="10dp"
+        android:src="@drawable/ic_light_off"
+        app:layout_constraintEnd_toStartOf="@id/iv_air_on"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+    <ImageView
+        android:id="@+id/iv_air_on"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_smarthome_air_on"
+        android:padding="10dp"
+        android:src="@drawable/ic_air_on"
+        app:layout_constraintEnd_toStartOf="@id/iv_air_off"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+    <ImageView
+        android:id="@+id/iv_air_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_smarthome_device_off"
+        android:padding="10dp"
+        android:src="@drawable/ic_air_off"
+        app:layout_constraintEnd_toStartOf="@id/iv_curtain_on"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+    <ImageView
+        android:id="@+id/iv_curtain_on"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_smarthome_curtain_on"
+        android:padding="10dp"
+        android:src="@drawable/ic_curtain_on"
+        app:layout_constraintEnd_toStartOf="@id/iv_curtain_off"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+    <ImageView
+        android:id="@+id/iv_curtain_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_smarthome_device_off"
+        android:padding="10dp"
+        android:src="@drawable/ic_curtain_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

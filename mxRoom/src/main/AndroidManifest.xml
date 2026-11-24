@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".ui.RoomManageActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.RoomSettingActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.RoomSelectActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.RoomCreateActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.mxchip.mxapp.room.ui.RoomPermissionActivity"
+            android:screenOrientation="behind" />
+    </application>
+
+</manifest>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/mx_sync_data"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/core_color_dividers"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <com.mxchip.mxapp.base.widget.MaxHeightRecyclerView
+            android:id="@+id/rv_rooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/top_line"
+            app:rv_max_height="256dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/core_color_dividers"
+            app:layout_constraintTop_toBottomOf="@id/rv_rooms" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textColor="@color/core_color_text_tips_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btn_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_rooms"
+            android:text="@string/mx_cancel" />
+
+        <View
+            android:id="@+id/middle_line"
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/core_color_dividers"
+            app:layout_constraintBottom_toBottomOf="@id/btn_cancel"
+            app:layout_constraintEnd_toStartOf="@id/btn_cancel"
+            app:layout_constraintStart_toEndOf="@id/btn_start"
+            app:layout_constraintTop_toTopOf="@id/btn_cancel" />
+
+        <TextView
+            android:id="@+id/btn_start"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_cancel"
+            app:layout_constraintTop_toBottomOf="@id/rv_rooms"
+            android:text="@string/mx_start_sync" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

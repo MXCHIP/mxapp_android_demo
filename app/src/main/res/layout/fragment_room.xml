@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_solid_white65_r30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/tv_get_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="@string/mx_set_location"
+                android:textColor="@color/core_color_text_list_content"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_location_triangle"
+                app:drawableTint="@color/core_color_text_title" />
+
+            <ImageView
+                android:id="@+id/iv_weather_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_weather_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/core_color_text_list_content"
+                    android:textSize="12sp"
+                    tools:text="31°C" />
+
+                <TextView
+                    android:id="@+id/tv_weather_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/core_color_text_list_content"
+                    android:textSize="12sp"
+                    tools:text="深圳" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_room"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:background="@null"
+            app:layout_constraintEnd_toStartOf="@id/iv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_location"
+            app:tabIndicator="@drawable/core_bg_tab_indicator"
+            app:tabIndicatorColor="@color/core_color_text_title"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/core_color_text_title"
+            app:tabTextAppearance="@style/appTabBarText"
+            app:tabTextColor="@color/core_color_text_list_content" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tab_layout_room" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout_room" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

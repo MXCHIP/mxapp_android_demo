@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_white_to_black"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_white_to_transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/mx_connect_wifi"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="2dp"
+        android:gravity="center_vertical"
+        android:text="@string/mx_provision_wifi_limit_tips"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/pair_ic_wifi_warn"
+        app:drawableTint="@color/core_color_text_list_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_status_title" />
+
+    <FrameLayout
+        android:id="@+id/layout_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="24dp">
+
+        <EditText
+            android:id="@+id/et_wifi_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:background="@null"
+            android:drawableStart="@drawable/pair_ic_wifi"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/core_color_text_dialog_content"
+            android:gravity="center_vertical"
+            android:hint="@string/mx_wifi_ssid_hint"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_wifi_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/pair_ic_wifi_exchange" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/wifi5g_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center_horizontal"
+        android:text="@string/mx_wifi_ssid_error"
+        android:textColor="@color/core_color_warning"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/layout_wifi_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp">
+
+        <EditText
+            android:id="@+id/et_wifi_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:background="@null"
+            android:drawableStart="@drawable/pair_ic_password"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/core_color_text_dialog_content"
+            android:hint="@string/mx_wifi_password_hint"
+            android:inputType="textPassword"
+            android:textColor="@color/core_color_text_title"
+            android:textColorHint="@color/core_color_text_tips_content"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_pwd_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/pair_ic_password_hide" />
+
+    </FrameLayout>
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/mx_next"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:sbRadius="22" />
+
+    <TextView
+        android:id="@+id/tv_skip_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/mx_skip_set"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</LinearLayout>

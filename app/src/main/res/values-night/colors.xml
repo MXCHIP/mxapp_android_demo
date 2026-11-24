@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mine_item_icon_color1">#73C5D3E4</color>
+    <color name="mine_item_icon_color2">#73D8E2EC</color>
+
+    <color name="home_tab_text_normal">#73ffffff</color>
+    <color name="home_tab_text_checked">#d9ffffff</color>
+
+    <color name="app_color_black_to_white">#FFFFFFFF</color>
+
+    <color name="app_white_to_transparent">#00000000</color>
+
+    <color name="app_color_f5f6fa_to_third">#1a1a1a</color>
+
+    <color name="app_color_f8f8f8_to_404040">#404040</color>
+
+    <color name="app_color_f9f9f9_to_third">#1a1a1a</color>
+
+    <color name="app_color_f6f6f6_to_transparent">#00000000</color>
+
+    <color name="app_color_bfbfbf_to_40FFFFFF">#40FFFFFF</color>
+
+    <color name="app_color_white_to_black">#FF000000</color>
+
+    <color name="app_color_dadada_to_1a1a1a">#1A1A1A</color>
+
+    <color name="app_color_home_fragment_scene_ring_bg">#33ffffff</color>
+
+    <color name="app_color_white_65">#73000000</color>
+
+    <color name="app_color_002c5a_to_13b7f9">#13B7F9</color>
+</resources>

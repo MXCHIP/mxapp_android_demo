@@ -1,0 +1,30 @@
+// 模块通用配置
+// 使用方法：在模块的build.gradle中添加 apply from: '../build-modules-common.gradle'
+
+// 通用Android配置
+android {
+    compileSdk libs.versions.compilesdk.get().toInteger()
+    
+    defaultConfig {
+        minSdk libs.versions.minsdk.get().toInteger()
+        targetSdk libs.versions.targetsdk.get().toInteger()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+    buildFeatures {
+        viewBinding = true
+    }
+}

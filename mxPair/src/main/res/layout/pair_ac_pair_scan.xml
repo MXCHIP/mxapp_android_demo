@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_background_tab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/core_color_background_main">
+
+        <com.mxchip.mxapp.pair.weidget.WaterWaveView
+            android:id="@+id/water_wave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-30dp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="80dp" />
+
+        <com.mxchip.mxapp.base.widget.ShapeableButton
+            android:id="@+id/tv_state_nofound"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:text="@string/mx_not_found_device"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:sbRadius="22" />
+
+        <LinearLayout
+            android:id="@+id/layout_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.mxchip.mxapp.base.widget.ShapeableButton
+                android:id="@+id/tv_one_key_select"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:textSize="15sp"
+                app:sbRadius="22"
+                tools:text="一键选择(30/30)" />
+
+            <com.mxchip.mxapp.base.widget.ShapeableButton
+                android:id="@+id/tv_add"
+                android:layout_width="136dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="24dp"
+                android:gravity="center"
+                android:text="@string/mx_add_device"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:sbRadius="22" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_search_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_search_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/mx_provision_search_prepare"
+                android:textColor="@color/core_color_text_title"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_state_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center_vertical"
+                android:text="@string/mx_permission_ble_location"
+                android:textSize="12sp" />
+
+            <com.mxchip.mxapp.base.widget.ShapeableConstraintLayout
+                android:id="@+id/layout_open_location"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:radius="16"
+                app:solid="@color/core_color_background_list">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/pair_ic_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="@string/mx_permission_location_switch"
+                    android:textColor="@color/core_color_text_title"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/core_ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.mxchip.mxapp.base.widget.ShapeableConstraintLayout>
+
+            <com.mxchip.mxapp.base.widget.ShapeableConstraintLayout
+                android:id="@+id/layout_open_ble"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                app:radius="16"
+                app:solid="@color/core_color_background_list">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/pair_ic_bluetooth"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="@string/mx_permission_ble_switch"
+                    android:textColor="@color/core_color_text_title"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/core_ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.mxchip.mxapp.base.widget.ShapeableConstraintLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_main"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/mx_room_setting" />
+
+    <com.mxchip.mxapp.base.widget.CommonItemView
+        android:id="@+id/room_name"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/core_bg_solid_white_r16"
+        app:niv_text="@string/mx_room_name"
+        app:end_icon="@drawable/core_ic_arrow_right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/core_bg_solid_white_r16"
+        android:orientation="vertical">
+
+        <com.mxchip.mxapp.base.widget.CommonItemView
+            android:id="@+id/item_scene_manager"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:niv_text="@string/mx_scene_manual_manage"
+            app:end_icon="@drawable/core_ic_arrow_right" />
+
+        <com.mxchip.mxapp.base.widget.CommonItemView
+            android:id="@+id/item_device_manager"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:niv_text="@string/mx_device_manage"
+            app:end_icon="@drawable/core_ic_arrow_right" />
+
+        <com.mxchip.mxapp.base.widget.CommonItemView
+            android:id="@+id/item_group_manager"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:niv_text="@string/mx_group_manage"
+            app:end_icon="@drawable/core_ic_arrow_right" />
+
+        <com.mxchip.mxapp.base.widget.CommonItemView
+            android:id="@+id/item_auto_manager"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:niv_text="@string/mx_scene_auto_manage"
+            app:end_icon="@drawable/core_ic_arrow_right" />
+    </LinearLayout>
+</LinearLayout>

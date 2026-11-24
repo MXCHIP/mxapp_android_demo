@@ -1,0 +1,69 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+
+        maven { url 'https://developer.huawei.com/repo/' }
+
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MXCHIP/artifacts")
+
+            credentials {
+                def githubLocalProperties = new Properties()
+                def githubLocalPropertiesFile = new File(settings.settingsDir, "local.properties")
+                if (githubLocalPropertiesFile.exists()) {
+                    githubLocalPropertiesFile.withInputStream { githubLocalProperties.load(it) }
+                }
+                username = githubLocalProperties.getProperty("github.user") ?: System.getenv("GITHUB_USER") ?: ""
+                password = githubLocalProperties.getProperty("github.token") ?: System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
+        mavenCentral()
+        google()
+    }
+}
+dependencyResolutionManagement {
+    // repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+
+        maven { url 'https://developer.huawei.com/repo/' }
+
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/MXCHIP/artifacts")
+
+            credentials {
+                def githubLocalProperties = new Properties()
+                def githubLocalPropertiesFile = new File(settings.settingsDir, "local.properties")
+                if (githubLocalPropertiesFile.exists()) {
+                    githubLocalPropertiesFile.withInputStream { githubLocalProperties.load(it) }
+                }
+                username = githubLocalProperties.getProperty("github.user") ?: System.getenv("GITHUB_USER") ?: ""
+                password = githubLocalProperties.getProperty("github.token") ?: System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
+        mavenCentral()
+        google()
+    }
+}
+
+rootProject.name = "mxapp_android_demo"
+include ':app'
+include ':coreCommon'
+include ':mxAccount'
+include ':mxFamily'
+include ':mxRoom'
+include ':mxDevice'
+include ':mxPair'

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="circleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="roundImageStyle_12">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
+    </style>
+
+    <style name="roundSmartHomeSceneStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
+    </style>
+
+    <style name="setting_item_textview_style">
+        <item name="android:textColor">#d9101010</item>
+        <item name="android:textSize">15sp</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_marginStart">54dp</item>
+    </style>
+
+    <style name="setting_item_imageview_style">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <style name="appTabBarText" parent="android:TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

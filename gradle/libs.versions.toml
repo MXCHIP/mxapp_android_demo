@@ -1,0 +1,64 @@
+[versions]
+compilesdk = "36"
+targetsdk = "36"
+minsdk = "26"
+agp = "8.9.2"
+kotlin = "2.1.20"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+
+[libraries]
+coreKtx = { group = "androidx.core", name = "core-ktx", version = "1.16.0" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.1" }
+material = { group = "com.google.android.material", name = "material", version = "1.12.0" }
+activityKtx = { group = "androidx.activity", name = "activity-ktx", version = "1.10.1" }
+fragmentKtx = { group = "androidx.fragment", name = "fragment-ktx", version = "1.8.8" }
+constraintLayout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "2.2.1" }
+lifecycleViewModelKtx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "2.9.1" }
+lifecycleRunTimeKtx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.9.1" }
+swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version = "1.1.0" }
+
+kotlinCoroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version = "1.5.0" }
+kotlinCoroutinesAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version = "1.5.0" }
+
+moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version = "1.12.0" }
+retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version = "2.9.0" }
+
+pagingKtx = { module = "androidx.paging:paging-runtime-ktx", version = "3.4.2" }
+firebaseBom = { group = "com.google.firebase", name = "firebase-bom", version = "34.4.0" }
+#FCM SDK
+firebaseMessaging = { group = "com.google.firebase", name = "firebase-messaging" }
+
+mxLog = { group = "com.mxchip.android", name = "log", version = "3.0.0" }
+mxHttp = { group = "com.mxchip.android", name = "http", version = "4.0.0" }
+mxScanner = { group = "com.mxchip.android", name = "scanner", version = "1.0.1" }
+mxMesh = { group = "com.mxchip.android", name = "mesh", version = "4.1.3" }
+mxMeshRule = { group = "com.mxchip.android", name = "mesh-rule", version = "3.0.1" }
+mxLink = { group = "com.mxchip.android", name = "link", version = "3.0.3" }
+mxUtils = { group = "com.mxchip.android", name = "utils", version = "2.0.1" }
+
+mmkv = { group = "com.tencent", name = "mmkv-static", version = "2.2.2" }
+bugly = { group = "com.tencent.bugly", name = "crashreport", version = "4.1.9.3" }
+wxOpensdk = { group = "com.tencent.mm.opensdk", name = "wechat-sdk-android", version = "6.8.34" }
+
+alipayAuth = { module = "com.mxchip.android:alipay-auth", version = "1.0.0.241107165731" }
+aliOSS = { group = "com.aliyun.dpa", name = "oss-android-sdk", version = "2.9.13" }
+
+coil = { group = "io.coil-kt", name = "coil", version = "1.2.0" }
+lottie = { group = "com.airbnb.android", name = "lottie", version = "6.5.2" }
+spongycastleProv = { group = "com.madgag.spongycastle", name = "prov", version = "1.58.0.0" }
+
+qrScan = { group = "com.github.jenly1314", name = "zxing-lite", version = "3.3.0" }
+zip4j = { group = "net.lingala.zip4j", name = "zip4j", version = "2.11.5" }
+permission = { group = "com.github.getActivity", name = "XXPermissions", version = "20.0" }
+#https://github.com/youth5201314/banner
+banner = { group = "io.github.youth5201314", name = "banner", version = "2.2.3" }
+#https://github.com/afreakyelf/Pdf-Viewer
+pdfViewer = { group = "io.github.afreakyelf", name = "Pdf-Viewer", version = "2.3.7" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+extJunit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

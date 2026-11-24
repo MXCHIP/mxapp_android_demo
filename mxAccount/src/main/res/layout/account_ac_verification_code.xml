@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_tab"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="24sp"
+        android:text="@string/mx_input_code" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/core_color_text_dialog_content"
+        android:textSize="14sp"
+        tools:text="我们已发送验证码" />
+
+    <com.mxchip.mxapp.base.widget.VerificationEditText
+        android:id="@+id/et_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:focusable="auto"
+        android:inputType="number"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:inputMargin="10dp"
+        app:inputRadius="4dp"
+        app:strokeNormalColor="@color/core_color_dividers" />
+
+    <TextView
+        android:id="@+id/send_ver_code_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/mx_resend_code"
+        android:textSize="16sp"/>
+
+</LinearLayout>

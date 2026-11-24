@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_main">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_background_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_text="@string/mx_recovery" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/core_color_background_tab"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/mx_recovery_tips_title"
+        android:textColor="@color/core_color_text_dialog_content"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_device"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_restart"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <com.mxchip.mxapp.base.widget.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:ev_content="@string/mx_recovery_no_data"
+        app:layout_constraintBottom_toBottomOf="@id/rv_device"
+        app:layout_constraintEnd_toEndOf="@id/rv_device"
+        app:layout_constraintStart_toStartOf="@id/rv_device"
+        app:layout_constraintTop_toTopOf="@id/rv_device" />
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/tv_restart"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        tools:text="@string/mx_recover_restart"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_continue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:sbRadius="22" />
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/tv_continue"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="@string/mx_recover_continue"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_restart"
+        app:sbRadius="22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'mxchip-router'
+}
+
+android {
+    compileSdk libs.versions.compilesdk.get().toInteger()
+    namespace 'com.mxchip.mxapp'
+    defaultConfig {
+        applicationId "com.mxchip.mxapp"
+        minSdk libs.versions.minsdk.get().toInteger()
+        targetSdk libs.versions.targetsdk.get().toInteger()
+        versionCode 186
+        versionName "1.0.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+//            // Enables code-related app optimization.
+//            minifyEnabled true
+//
+//            // Enables resource shrinking.
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [icon: "@mipmap/ic_launcher_app"]
+            routerConfig { openASM = true }
+        }
+
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [icon: "@mipmap/ic_launcher_test"]
+            routerConfig { openASM = false }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+
+    bundle {
+        language {
+            //上架Google play aab打包时，是否开启语言分包
+            enableSplit = false
+        }
+    }
+}
+
+dependencies {
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation project(':coreCommon')
+    implementation project(':mxAccount')
+    implementation project(':mxPair')
+    implementation project(':mxDevice')
+    implementation project(':mxFamily')
+    implementation project(':mxRoom')
+    implementation libs.material
+    implementation libs.activityKtx
+    implementation libs.fragmentKtx
+    implementation libs.lottie
+    implementation libs.banner
+    implementation libs.moshiKotlin
+    implementation libs.retrofitMoshi
+}

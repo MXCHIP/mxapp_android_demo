@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="account_color_85_101010">#d9101010</color>
+    <color name="account_color_00afff_a8">#1400AFFF</color>
+    <color name="account_color_65_101010">#a6101010</color>
+    <color name="account_color_bfbfbf">#bfbfbf</color>
+    <color name="account_color_002c5a_to_13b7f9">#002C5A</color>
+    <color name="account_color_white_to_black">#FFFFFFFF</color>
+</resources>

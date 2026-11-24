@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".ui.HomeManageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.FamilySettingActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.CreateHomeGuideActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.CreateRoomGuideActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.HomeMemberDetailActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.LocationActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.HandOverVerificationActivity"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".ui.InviteMemberActivity"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".ui.JoinHomeByInviteCodeActivity"
+            android:screenOrientation="behind" />
+    </application>
+</manifest>

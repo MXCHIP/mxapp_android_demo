@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <activity
+            android:name=".ui.DeviceDevicePanelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.DeviceDetailActivity"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".ui.DeviceRecoveryListActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.DeviceSyncMatterListActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.SyncMatterHelpActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.CenterControlSmartListActivity"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".ui.DeviceSyncDataFailedActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.ProductUseManualActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.SharedDeviceDetailActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.ShortcutDeviceDetailActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.DeviceAlarmListActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.RoomDeviceListActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.SelectReplaceDeviceActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.DeviceShareListActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.DeviceShareAccountActivity"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".ui.MineDeviceDetailActivity"
+            android:screenOrientation="behind" />
+    </application>
+</manifest>

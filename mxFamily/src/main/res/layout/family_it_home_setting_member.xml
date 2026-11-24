@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/core_color_background_list">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/member_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageStyle"
+        tools:src="@drawable/family_ic_default_avatar" />
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/member_type"
+        app:layout_constraintStart_toEndOf="@id/member_icon"
+        app:layout_constraintTop_toTopOf="@id/member_icon"
+        tools:text="@string/mx_family_member" />
+
+    <TextView
+        android:id="@+id/member_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/member_icon"
+        app:layout_constraintEnd_toEndOf="@id/member_name"
+        app:layout_constraintStart_toStartOf="@id/member_name"
+        tools:text="@string/mx_family_member" />
+
+    <TextView
+        android:id="@+id/member_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/mx_role_owner"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_rignt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_rignt"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/core_ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

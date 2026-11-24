@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBarView">
+        <attr name="right_text" format="string|reference" />
+        <attr name="right_text_color" format="color|reference" />
+        <attr name="title_text" format="string|reference" />
+        <attr name="tint_color" format="color|reference"/>
+        <attr name="back_icon_visibility">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="VerificationEditText">
+        <attr name="number" format="integer" />
+        <attr name="inputMargin" format="dimension" />
+        <attr name="bgColor" format="color|reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="inputRadius" format="dimension" />
+        <attr name="strokeFocusColor" format="color|reference" />
+        <attr name="strokeNormalColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyView">
+        <attr name="ev_content" format="string|reference" />
+        <attr name="ev_icon" format="reference" />
+        <attr name="ev_icon_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NotifyItemView">
+        <attr name="start_icon" format="reference" />
+        <attr name="start_icon_tint" format="color|reference"/>
+        <attr name="niv_text" format="reference|integer" />
+        <attr name="text_describe" format="reference|integer" />
+        <attr name="text_color" format="color" />
+        <attr name="show_red_point" format="boolean" />
+        <attr name="end_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="pb_radius" format="dimension|reference"/>
+        <attr name="pb_bg_color" format="color|reference"/>
+        <attr name="pb_progress_color" format="color|reference"/>
+        <attr name="pb_text_color" format="color|reference"/>
+        <attr name="pb_text" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShapeableButton">
+        <attr name="sbBgColor" format="color"/>
+        <attr name="sbRadius" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="rv_max_height" format="reference|dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoKeyboardConstraintLayout">
+        <attr name="bottomViewIds" format="string"/>
+        <attr name="aboveViewId" format="reference"/>
+        <attr name="autoMargin" format="dimension"/>
+        <attr name="autoType" format="flags">
+            <flag name="normal" value="0" />
+            <flag name="auto_translation" value="1" />
+            <flag name="auto_scroll" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeTextView">
+        <attr name="isMarquee" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomizeSwitchView">
+        <attr name="cs_normal_outer_bg" format="color|reference"/>
+        <attr name="cs_normal_inner_bg" format="color|reference"/>
+        <attr name="cs_checked_outer_bg" format="color|reference"/>
+        <attr name="cs_checked_inner_bg" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="Shapeable">
+        <attr format="color" name="solid"/>
+        <attr format="integer" name="radius"/>
+    </declare-styleable>
+</resources>

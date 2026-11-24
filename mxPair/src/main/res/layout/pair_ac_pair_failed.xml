@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_color_background_main"
+    android:orientation="vertical">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_color_background_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_text="@string/mx_failed_detail" />
+
+    <com.mxchip.mxapp.base.widget.ShapeableLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:radius="16"
+        app:solid="@color/core_color_background_list">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="设备昵称" />
+
+        <TextView
+            android:id="@+id/tv_failed_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            tools:text="蓝牙链接失败"
+            android:textColor="@color/core_color_error"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_failed_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1" />
+
+    </com.mxchip.mxapp.base.widget.ShapeableLinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/core_color_background_tab">
+
+        <com.mxchip.mxapp.base.widget.ShapeableButton
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/mx_i_know"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:sbRadius="22" />
+
+    </FrameLayout>
+</LinearLayout>

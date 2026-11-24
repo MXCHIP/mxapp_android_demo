@@ -1,0 +1,19 @@
+[
+  {"zh_name":"中国香港","code":852,"iso2":"HK","iso3":"HKG","pinyin":"ZhongGuoXiangGang","en_name":"Hong Kong(China)","server_station":"Singapore"},
+  {"zh_name":"中国澳门","code":853,"iso2":"MO","iso3":"MAC","pinyin":"ZhongGuoAoMen","en_name":"Macau(China)","server_station":"Singapore"},
+  {"zh_name":"中国台湾","code":886,"iso2":"TW","iso3":"TWN","pinyin":"ZhongGuoTaiWan","en_name":"Taiwan(China)","server_station":"Singapore"},
+  {"zh_name":"韩国","code":82,"iso2":"KR","iso3":"KOR","pinyin":"HanGuo","en_name":"South Korea","server_station":"Singapore"},
+  {"zh_name":"日本","code":81,"iso2":"JP","iso3":"JPN","pinyin":"RiBen","en_name":"Japan","server_station":"Singapore"},
+  {"zh_name":"新加坡","code":65,"iso2":"SG","iso3":"SGP","pinyin":"XinJiaPo","en_name":"Singapore","server_station":"Singapore"},
+  {"zh_name":"马来西亚","code":60,"iso2":"MY","iso3":"MYS","pinyin":"MaLaiXiYa","en_name":"Malaysia","server_station":"Singapore"},
+  {"zh_name":"泰国","code":66,"iso2":"TH","iso3":"THA","pinyin":"TaiGuo","en_name":"Thailand","server_station":"Singapore"},
+  {"zh_name":"越南","code":84,"iso2":"VN","iso3":"VNM","pinyin":"YueNan","en_name":"Vietnam","server_station":"Singapore"},
+  {"zh_name":"菲律宾","code":63,"iso2":"PH","iso3":"PHL","pinyin":"FeiLvBin","en_name":"Philippines","server_station":"Singapore"},
+  {"zh_name":"印度尼西亚","code":62,"iso2":"ID","iso3":"IDN","pinyin":"YinDuNiXiYa","en_name":"Indonesia","server_station":"Singapore"},
+  {"zh_name":"柬埔寨","code":855,"iso2":"KH","iso3":"KHM","pinyin":"JianPuZhai","en_name":"Cambodia","server_station":"Singapore"},
+  {"zh_name":"文莱","code":673,"iso2":"BN","iso3":"BRN","pinyin":"WenLai","en_name":"Brunei","server_station":"Singapore"},
+  {"zh_name":"老挝","code":856,"iso2":"LA","iso3":"LAO","pinyin":"LaoWo","en_name":"Laos","server_station":"Singapore"},
+  {"zh_name":"缅甸","code":95,"iso2":"MM","iso3":"MMR","pinyin":"MianDian","en_name":"Myanmar","server_station":"Singapore"},
+  {"zh_name":"巴基斯坦","code":92,"iso2":"PK","iso3":"PAK","pinyin":"BaJiSiTan","en_name":"Pakistan","server_station":"Singapore"},
+  {"zh_name":"尼泊尔","code":977,"iso2":"NP","iso3":"NPL","pinyin":"NiBoEr","en_name":"Nepal","server_station":"Singapore"}
+]

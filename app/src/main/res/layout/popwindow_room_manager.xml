@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_color_transparent">
+
+    <!--房间popWindow调整限定宽度，关联bug->29063;-->
+    <com.mxchip.mxapp.base.widget.ShapeableLinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        app:radius="16"
+        app:solid="@color/core_color_background_dialog">
+
+        <TextView
+            android:id="@+id/room_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="@string/mx_room_manage"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/device_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="@string/mx_device_manage"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </com.mxchip.mxapp.base.widget.ShapeableLinearLayout>
+
+</FrameLayout>

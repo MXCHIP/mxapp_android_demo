@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/member_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        tools:src="@drawable/family_ic_default_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageStyle" />
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="130dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxEms="15"
+        android:singleLine="true"
+        tools:text="@string/mx_family_member"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/member_icon"
+        app:layout_goneMarginStart="20dp" />
+
+    <TextView
+        android:id="@+id/member_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        tools:text="@string/mx_family_member"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/member_icon"
+        app:layout_constraintStart_toEndOf="@id/member_icon"
+        app:layout_goneMarginStart="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

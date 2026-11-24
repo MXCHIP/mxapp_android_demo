@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/account_color_white_to_black">
+
+    <com.mxchip.mxapp.base.widget.TopBarView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/btn_switch_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:drawablePadding="4dp"
+            android:textColor="@color/core_color_text_dialog_content"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:drawableEndCompat="@drawable/ic_region_location"
+            app:drawableTint="@color/core_color_text_dialog_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="国家"
+            tools:visibility="visible" />
+
+
+    </com.mxchip.mxapp.base.widget.TopBarView>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/core_color_text_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="@string/mx_register" />
+
+    <View
+        android:id="@+id/account_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/core_bg_input_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
+
+    <FrameLayout
+        android:id="@+id/account_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/account_bg"
+        app:layout_constraintStart_toStartOf="@id/account_bg"
+        app:layout_constraintTop_toTopOf="@id/account_bg">
+
+        <TextView
+            android:id="@+id/tv_selected_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="(+86)"
+            android:textColor="@color/core_color_text_list_content"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/account_ic_email"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/core_color_text_title"
+        android:textColorHint="@color/account_color_bfbfbf"
+        android:textCursorDrawable="@drawable/core_bg_edittext_cursor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/account_bg"
+        app:layout_constraintEnd_toStartOf="@id/clear_text"
+        app:layout_constraintStart_toEndOf="@id/account_type"
+        app:layout_constraintTop_toTopOf="@id/account_bg"
+        tools:hint="@string/mx_account_phone_hint" />
+
+    <ImageView
+        android:id="@+id/clear_text"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:paddingEnd="15dp"
+        android:src="@drawable/core_ic_input_clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/et_account"
+        app:layout_constraintEnd_toEndOf="@id/account_bg"
+        app:layout_constraintTop_toTopOf="@id/et_account" />
+
+    <com.mxchip.mxapp.base.widget.ShapeableButton
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/account_bg"
+        app:sbRadius="26"
+        android:text="@string/mx_send_code" />
+
+    <LinearLayout
+        android:id="@+id/ll_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/next">
+
+        <ImageView
+            android:id="@+id/iv_policy"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="6dp"
+            android:src="@drawable/core_ic_round_unselected" />
+
+        <TextView
+            android:id="@+id/tv_has_read_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/core_color_text_list_content"
+            tools:text="我已阅读并同意xxxx" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

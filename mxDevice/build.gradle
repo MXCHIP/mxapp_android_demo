@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'mxchip-router'
+}
+
+// 应用通用MX模块配置
+apply from: '../build-modules-common.gradle'
+
+android {
+    namespace "com.mxchip.mxapp.device"
+}
+
+dependencies {
+    implementation project(':coreCommon')
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activityKtx
+    implementation libs.fragmentKtx
+    implementation libs.kotlinCoroutinesCore
+    implementation libs.kotlinCoroutinesAndroid
+    implementation libs.lifecycleRunTimeKtx
+    implementation libs.spongycastleProv
+    implementation libs.pdfViewer
+    implementation libs.mxLink
+}

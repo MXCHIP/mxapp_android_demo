@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--重要⽂字（标题等）-->
+    <color name="core_color_text_title">#262626</color>
+    <!--次要文字-->
+    <color name="core_color_text_dialog_content">#595959</color>
+    <!--一般文字-->
+    <color name="core_color_text_list_content">#8C8C8C</color>
+    <!--弱文字-->
+    <color name="core_color_text_tips_content">#BFBFBF</color>
+    <!--边框颜色-->
+    <color name="core_color_border">#CCCCCC</color>
+    <color name="core_color_borders">#C80D0D</color>
+    <!--分割线颜⾊-->
+    <color name="core_color_dividers">#EEEEEE</color>
+
+    <color name="core_color_dividers_a_45">#73EEEEEE</color>
+    <!--文字间分割线-->
+    <color name="core_color_vertical_text_dividers">#14000000</color>
+
+    <!--整体背景-->
+    <color name="core_color_background_main">#F2F2F7</color>
+    <!--标签栏背景-->
+    <color name="core_color_background_tab">#FFFFFF</color>
+    <!--卡片，列表背景-->
+    <color name="core_color_background_list">#FFFFFF</color>
+    <!--弹框背景⾊-->
+    <color name="core_color_background_dialog">#FFFFFF</color>
+    <!--五级背景⾊-->
+    <color name="core_color_background_fifth">#FFFFFF</color>
+    <!--全局取消按钮背景色-->
+    <color name="core_color_background_cancel">#F5F5F5</color>
+
+    <!--功能⾊(警告、链接、成功、错误)-->
+    <color name="core_color_warning">#FAAD14</color>
+    <color name="core_color_warning_a10">#1AFAAD14</color>
+    <color name="core_color_link">#1890FF</color>
+    <color name="core_color_success">#52C41A</color>
+    <color name="core_color_error">#FF4D4F</color>
+    <color name="core_color_error_a10">#1AFF4D4F</color>
+
+    <color name="core_color_13b7f9">#13B7F9</color>
+
+    <color name="core_color_white_to_transparent">#FFFFFFFF</color>
+    <color name="core_color_white_to_black">#FFFFFFFF</color>
+    <color name="core_color_white_a65_to_black_a75">#A6FFFFFF</color>
+    <color name="core_color_f8f8f8_to_404040">#f8f8f8</color>
+    <color name="core_color_bfbfbf_to_40ffffff">#bfbfbf</color>
+    <color name="core_color_dadada_to_1a1a1a">#DADADA</color>
+    <color name="core_color_002c5a_to_13b7f9">#002C5A</color>
+
+    <color name="core_color_52c41a_a10">#1A52C41A</color>
+</resources>

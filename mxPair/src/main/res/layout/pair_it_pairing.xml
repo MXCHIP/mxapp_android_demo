@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/core_color_text_title"
+            android:textSize="16sp"
+            tools:text="智家精选_1键零火开关_F18_MESH" />
+
+        <TextView
+            android:id="@+id/tv_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="@string/mx_sync_fail"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/core_color_text_list_content"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="24dp" />
+
+    <ImageView
+        android:id="@+id/iv_failed"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/core_ic_arrow_right"
+        android:visibility="gone" />
+
+</FrameLayout>
