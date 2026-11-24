@@ -152,17 +152,20 @@ Manifest 的 `android:label` 也引用这个字符串。
 | `setSupportDeviceShare` | `true` | 单设备分享 |
 | `setSupportDeviceFeedback` | `false` | 设备反馈。个人中心模块已移除，保持关闭 |
 
-### 2.7 `apiCore`：请求签名，客户通常不改
+### 2.7 请求签名 AAR
 
-`HeaderInterceptor` 给每个请求加 `appid`、`sign`、`authorization`、`accept-language`、`ts`、`nonce`。`appid` / `secret` 来自 `MXApiConfigUtil`，由 `EnvConfigManager.initHostConfig()` 写入。
+对外只提供 `libs/apiCore-release.aar`，由 `coreCommon` 引用。里面两个类：
 
-只有要改签名算法时才改这里，改完需要执行：
+`MXApiConfigUtil`：
 
-```bash
-./gradlew :apiCore:exportReleaseAar
-```
+| 方法 | 作用 |
+| --- | --- |
+| `setMxAppInfo(appId, appSecret)` | 写入当前环境的 AppId、AppSecret |
+| `getMXAppId()` / `getAppSecret()` | 读取上面写入的值 |
+| `setToken(token)` / `getToken()` | 写入、读取登录 Token |
+| `setLanguage(language)` / `getLanguage()` | 写入、读取请求语言，默认 `zh-Hans-CN` |
 
-产物覆盖 `libs/apicore-release.aar`。日常换环境不要走这条路径。
+`HeaderInterceptor(appVersion, otherHeaders)`：OkHttp 拦截器。创建时传入应用版本号，以及可选的额外请求头。把它加进 `HttpManager.init` 的拦截器列表即可，Demo 在 `MXApplication.initHttp()` 里这样做。AppId、AppSecret、Token、语言用上面的 `MXApiConfigUtil` 设置，不需要改这个类。
 
 ---
 
